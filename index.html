@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+		<!--从桌面icon启动IOS Safari是否进入全屏状态（APP模式-->
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<!--	添加到主屏幕“后，全屏显示-->
+		<meta name="apple-touch-fullscreen" content="yes" />
+		<!--	指定状态栏的颜色-->
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<!--手机号码不被显示为拨号链接-->
+		<meta name="format-detection" content="telephone=no">
+		<!-- 浏览器全屏显示-->
+		<meta name="screen-orientation" content="portrait">
+		<meta name="full-screen" content="yes">
+		<meta name="x5-orientation" content="portrait">
+		<meta name="x5-fullscreen" content="true">
+		<title>一汽新捷达</title>
+		<link rel="stylesheet" href="css/swiper-3.3.1.min.css" />
+		<link rel="stylesheet" href="css/style.css" />
+
+	</head>
+
+	<body>
+		<div class="box">
+			<img src="img/bg.jpg">
+			<!--头图-->
+			<div class="box_top">
+				<div id="box_top" class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide top1"></div>
+						<div class="swiper-slide top2"></div>
+						<div class="swiper-slide top3"></div>
+					</div>
+					<div id="fenye1" class="fenye1"></div>
+				</div>
+			</div>
+			<!--预约试驾-->
+			<div class="formInput">
+				<div class="title">
+					<p class="title_one">预约试驾</p>
+				</div>
+				<div class="item1">
+					<!--input框一定要记住不要让他跑出去，让input的宽度左右都要小于父元素的宽度，切记-->
+					<p>姓名：</p>
+					<div class="input">
+						<input type="text" name="name" id="name" placeholder="请输入您的真实姓名">
+					</div>
+				</div>
+				<div class="item2">
+					<p>手机：</p>
+					<div class="input">
+						<input type="text" name="phone" id="phone" placeholder="请输入11位手机号">
+					</div>
+				</div>
+				<div class="item3">
+					<p>省份：</p>
+					<div class="sf">
+						<select id="province">
+							<option value="">&nbsp;&nbsp;省份</option>
+							<select>
+								<select id="city">
+									<option value="">&nbsp;&nbsp;城市</option>
+									<select>
+					</div>
+				</div>
+				<div class="item4">
+					<p>经销商：</p>
+					<div class="input">
+						<select id="jxs">
+							<option value="">请选择经销商</option>
+							<select>
+					</div>
+				</div>
+				<div class="btn">立即预约试驾</div>
+			</div>
+			<!--视频-->
+			<div class="video">
+				<video id="videoSourse" preload="auto" controls="controls" src="http://tstatic.toptest.yidianzixun.com.ks3-cn-beijing.ksyun.com/public/files/WeChatSight91480391486767.mp4" x-webkit-airplay="true" webkit-playsinline="true"></video>
+
+				<img id="videoSt" src="img/video.png">
+			</div>
+			<!--精美车图-->
+			<div class="car_psi">
+				<div class="new_btn"></div>
+				<div class="next_btn"></div>
+			</div>
+			<div class="lunbo_one">
+			<div class="gsgs">
+				<div class="gsgs_top">
+
+				</div>
+				<div class="gsgs_middle">
+					<div id="pageCar" class="swiper-container">
+						<div id="pageCar_one" class="swiper-wrapper ">
+							<div class="swiper-slide carchild1"></div>
+							<div class="swiper-slide carchild2"></div>
+							<div class="swiper-slide carchild3"></div>
+							<div class="swiper-slide carchild4"></div>
+							<div class="swiper-slide carchild5"></div>
+							<div class="swiper-slide carchild6"></div>
+							<div class="swiper-slide carchild7"></div>
+							<div class="swiper-slide carchild8"></div>
+							<div class="swiper-slide carchild9"></div>
+							<div class="swiper-slide carchild10"></div>
+							<div class="swiper-slide carchild11"></div>
+							<div class="swiper-slide carchild12"></div>
+							<div class="swiper-slide carchild13"></div>
+							<div class="swiper-slide carchild14"></div>
+						</div>
+						<!-- 如果需要导航按钮 -->
+						<div class="swiper-button-prev left-jt"></div>
+						<div class="swiper-button-next right-jt"></div>
+					</div>
+				</div>
+				<div class="gsgs_bottom">
+				</div>
+			</div>
+			<div class="gsywly">
+				<div class="gsywly_top">
+
+				</div>
+				<div class="gsywly_middle">
+					<div id="pageCar1" class="swiper-container ">
+						<div id="pageCar1" class="swiper-wrapper ">
+							<div class="swiper-slide car1"></div>
+							<div class="swiper-slide car2"></div>
+							<div class="swiper-slide car3"></div>
+							<div class="swiper-slide car4"></div>
+							<div class="swiper-slide car5"></div>
+							<div class="swiper-slide car6"></div>
+							<div class="swiper-slide car7"></div>
+							<div class="swiper-slide car8"></div>
+							<div class="swiper-slide car9"></div>
+							<div class="swiper-slide car10"></div>
+
+						</div>
+						<!-- 如果需要导航按钮 -->
+						<div class="swiper-button-prev left-jt"></div>
+						<div class="swiper-button-next right-jt"></div>
+					</div>
+				</div>
+				<div class="gsywly_bottom">
+
+				</div>
+
+			</div>
+            </div>
+			<!--车型配置-->
+			<!--<div class="chexing">
+				<div class="cp">-->
+					<!--<div class="cp_top">
+						<div class="cp1">
+							<div class="quanbu"></div>
+							<img src="img/03_01.png">
+						</div>
+						<div class="cp2">
+							<div class="guanbi"></div>
+							
+							<img src="img/02_02.png">
+							
+						</div>
+						<div class="cp3">
+							<div class="guanbi"></div>
+							
+							<img src="img/02_03.png">
+							
+						</div>
+						<div class="cp4">
+							<div class="guanbi"></div>
+							
+							<img src="img/02_04.png">
+							
+						</div>
+						<div class="cp5">
+							<div class="guanbi"></div>
+							
+							<img src="img/02_05.png">
+							
+						</div>
+						<div class="cp6">
+							<img src="img/02_06.png">
+							
+						</div>
+						<div class="cp7">
+							<div class="guanbi"></div>
+							
+							<img src="img/02_07.png">
+							
+						</div>
+						<div class="cp8">
+							<div class="guanbi"></div>
+							
+							<img src="img/02_08.png">
+							
+						</div>
+						<div class="cp9">
+							<div class="guanbi"></div>
+							
+							<img src="img/02_9.png">
+							
+						</div>
+						<div class="cp10">
+							<div class="guanbi"></div>
+							
+							<img src="img/02_10.png">
+						</div>
+					</div>
+					<div class="cp_bottom">
+						<img src="img/01_11.jpg">
+					</div>
+				</div>-->
+				
+		<!--	</div>-->
+            
+			<!--新闻-->
+			<div class="xinwen">
+				<div class="btn1"></div>
+				<div class="btn2"></div>
+			</div>
+			<!--返回顶部-->
+			<div class="fh"></div>
+			<!--官网-->
+			<div class="gw"></div>
+			<!--微博-->
+			<div class="wb"></div>
+
+		</div>
+
+		<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript" src="js/swiper-3.3.1.min.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
+	</body>
+
+</html>
