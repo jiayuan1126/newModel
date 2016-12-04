@@ -342,9 +342,7 @@ input[type="number"]::-webkit-textfield-decoration-container {
     height: 2.5%;
     position: absolute;
     left: 0;
-    top: 63%;
-/*    background: green;
-*/    z-index: 6;
+    top: 63%;  z-index: 6;
  }
 .box .car_psi .new_btn{
 	position: absolute;
@@ -352,7 +350,6 @@ input[type="number"]::-webkit-textfield-decoration-container {
     top: 0;
     width: 34%;
     height: 100%;
-    /*background: yellow;*/
 }
 .box .car_psi .next_btn{
 	position: absolute;
@@ -360,7 +357,6 @@ input[type="number"]::-webkit-textfield-decoration-container {
     top: 0;
     width: 34%;
     height: 100%;
-    /*background: yellow;*/
 }
  .box .lunbo_one{
  	    width: 100%;
@@ -649,7 +645,6 @@ input[type="number"]::-webkit-textfield-decoration-container {
 	top:0;
 	width: 100%;
 	height: 100%;
-	background:gray;
 	overflow:auto;
 }
 .cp_top{
@@ -660,6 +655,7 @@ input[type="number"]::-webkit-textfield-decoration-container {
 .cp_top .cp1,.cp2,.cp3,.cp4,.cp5,.cp6,.cp7,.cp8,.cp9,.cp10{
 	width: 140px;
 	float: left;
+	position: relative;
 }
 .cp_top .cp1 img,.cp2 img,.cp3 img,.cp4 img,.cp5 img,.cp6 img,.cp7 img,.cp8 img,.cp9 img,.cp10 img{
 	width: 100%;
@@ -672,4 +668,24 @@ input[type="number"]::-webkit-textfield-decoration-container {
 }
 .cp_bottom img{
 	width: 100%;
+}
+.cp_top .cp1 .quanbu{
+	width: 39%;
+    height: 0.6%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: url(../img/quan.png) no-repeat center;
+    background-size: auto 100%;
+    display: none;
+    z-index: 30;
+}
+.cp_top .cp2 #guanbi,.cp3 #guanbi,.cp4 #guanbi,.cp5 #guanbi,.cp6 #guanbi,.cp7 #guanbi,.cp8 #guanbi,.cp9 #guanbi,.cp10 .guanbi{
+	width: 14%;
+    height: 0.6%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background:transparent;
+    z-index: 30;
 }
