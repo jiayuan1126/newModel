@@ -1,3 +1,43 @@
+<?php
+
+$url = 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+$url = urlencode($url);
+$curl = curl_init();
+
+curl_setopt_array($curl, array(
+    CURLOPT_URL => "http://t1.toptest.yidianzixun.com/webservice/wxShare/get.php?clientUrl=" . $url,
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_ENCODING => "",
+    CURLOPT_MAXREDIRS => 10,
+    CURLOPT_TIMEOUT => 30,
+    CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+    CURLOPT_CUSTOMREQUEST => "GET",
+    CURLOPT_POSTFIELDS => "Key=ydinfo2016&RequestObjectList=%5B%5D",
+    CURLOPT_HTTPHEADER => array(
+        "cache-control: no-cache",
+        "content-type: application/x-www-form-urlencoded"
+    ),
+));
+
+$response = curl_exec($curl);
+$err = curl_error($curl);
+
+curl_close($curl);
+
+if ($err) {
+    echo "cURL Error #:" . $err;
+} else {
+    $response = json_decode($response);
+    $data = $response->data;
+
+    $timestamp = $data->timestamp;
+
+    $nonceStr = $data->nonceStr;
+
+    $signature = $data->signature;
+}
+?>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -21,6 +61,16 @@
 		<link rel="stylesheet" href="css/style.css" />
 	</head>
 	<body>
+	    <!--一点资讯分享-->
+		<div id="yidian_share_title" class="yidianShare" style="display:none;"></div>
+		<div id="yidian_share_content" class="yidianShare" style="display:none;"></div>
+		<div id="yidian_share_url" class="yidianShare" style="display:none;">http://t1.toptest.yidianzixun.com/2016/vw/newModel/app.php</div>
+		<div id="yidian_share_imageurl" class="yidianShare" style="display:none;">http://tstatic.toptest.yidianzixun.com.ks3-cn-beijing.ksyun.com/public/files/200x2001479293098089.png</div>
+		<!-- end -->
+		<div style="display: none;" id="timestamp" class="wxShare"><?php echo $timestamp; ?></div>
+		<div style="display: none;" id="nonceStr" class="wxShare"><?php echo $nonceStr; ?></div>
+		<div style="display: none;" id="signature" class="wxShare"><?php echo $signature; ?></div>
+		<div id="loading" class="loading"></div>
 		<div class="box">
 			<img src="img/bg.jpg">
 			<!--头图-->
@@ -296,6 +346,74 @@
 		<script type="text/javascript" src="js/swiper-3.3.1.min.js"></script>
 		<script type="text/javascript" src="js/mobile-detect.min.js" ></script>
 		<script type="text/javascript" src="js/script.js"></script>
+		<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+		<script type="text/javascript">
+        		    var my_timestamp=document.getElementById('timestamp').innerText.trim();
+        		    var my_nonceStr=document.getElementById('nonceStr').innerText.trim();
+        		    var my_signature=document.getElementById('signature').innerText.trim();
+        		    var myWXdata = {
+        		       imgurl:$('#yidian_share_imageurl').text(),
+        		       url:$('#yidian_share_url').text(),
+        		       title:$('#yidian_share_title').text(),
+        		       desc:$('#yidian_share_content').text()
+        		   };
+        		    wx.config({
+        		        debug: false,//判断是否为debug模式
+        		        appId:'wxdda4779e3944e490',
+        		        timestamp:my_timestamp,
+        		        nonceStr:""+my_nonceStr,
+        		        signature:""+my_signature,
+        		        jsApiList:[
+        		            'checkJsApi',
+        		            'onMenuShareTimeline',
+        		            'onMenuShareAppMessage',
+        		            'onMenuShareQQ',
+        		            'onMenuShareWeibo'
+        		        ]//开启的功能列表
+        		    });
+        		    var sharePerson = function(){
+        		        wx.ready(function(){
+        		            var mydata=myWXdata;
+        		            wx.onMenuShareTimeline({
+        		                title: mydata.title,
+        		                link: mydata.url,
+        		                imgUrl: mydata.imgurl,
+        		                trigger: function (res) {
+        		                    //alert('点击分享到朋友圈');
+        		                },
+        		                success:function(res){
+
+        		                }
+        		            });
+        		            //alert('已注册获取“分享到朋友圈”状态事件');
+        		            wx.onMenuShareAppMessage({
+        		                title: mydata.title,
+        		                desc: mydata.desc,
+        		                link:  mydata.url,
+        		                imgUrl: mydata.imgurl,
+        		                trigger: function (res) {
+        		                    //alert('用户点击发送给朋友');
+        		                },
+        		                success:function(res){
+
+        		                }
+        		            });
+        		            wx.onMenuShareQQ({
+        		                title: mydata.title,
+        		                desc: mydata.desc,
+        		                link: mydata.url,
+        		                imgUrl: mydata.imgurl,
+        		                trigger: function (res) {
+        		                    //alert('用户点击分享到QQ');
+        		                },
+        		                success:function(res){
+
+        		                }
+        		            });
+        		        });
+        		    };
+        		    sharePerson();
+        		</script>
 	</body>
 
 </html>

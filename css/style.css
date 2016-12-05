@@ -69,7 +69,16 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="number"]::-webkit-textfield-decoration-container {
 	background-color: #fafafa;
 }
-
+#loading {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../img/loading.gif) no-repeat center #fff;
+    background-size: auto 100%;
+    z-index: 300;
+}
 .box {
 	width: 100%;
 	height: auto;
@@ -304,6 +313,7 @@ input[type="number"]::-webkit-textfield-decoration-container {
     right: 10%;
     top: 41%;
     background: transparent;
+    z-index: 20;
 }
 .box .xinwen .btn2{
     width: 22%;
@@ -312,6 +322,7 @@ input[type="number"]::-webkit-textfield-decoration-container {
     right: 10%;
     top: 89%;
     background: transparent;
+    z-index: 20;
 }
 .box .fh{
     position: absolute;
@@ -359,7 +370,7 @@ input[type="number"]::-webkit-textfield-decoration-container {
     height: 100%;
 }
  .box .lunbo_one{
- 	    width: 100%;
+ 	width: 100%;
     height: 13%;
     position: absolute;
     left: 0;
@@ -484,7 +495,7 @@ input[type="number"]::-webkit-textfield-decoration-container {
     background-position: center top;
 }
 
-.swiper-button-prev.left-jt, .swiper-button-prev.lt-jt{
+.swiper-button-prev.left-jt, .swiper-button-prev.lt-jt,.swiper-button-prev.br1-jt{
     position: absolute;
     top: 50%;
     width: 27px;
@@ -501,7 +512,7 @@ input[type="number"]::-webkit-textfield-decoration-container {
     outline: none;
 }
 
-.swiper-button-next.right-jt,.swiper-button-next.rt-jt {
+.swiper-button-next.right-jt,.swiper-button-next.rt-jt,.swiper-button-next.rt1-jt{
     position: absolute;
     top: 50%;
     width: 27px;
@@ -520,6 +531,9 @@ input[type="number"]::-webkit-textfield-decoration-container {
     outline: none;
 }
 
+.swiper-button-prev.br1-jt,.swiper-button-next.rt1-jt{
+	top:26%;
+}
 .box .gsgs .gsgs_bottom{
 	width: 100%;
     height: 33%;
@@ -680,7 +694,7 @@ input[type="number"]::-webkit-textfield-decoration-container {
     display: none;
     z-index: 30;
 }
-.cp_top .cp2 #guanbi,.cp3 #guanbi,.cp4 #guanbi,.cp5 #guanbi,.cp6 #guanbi,.cp7 #guanbi,.cp8 #guanbi,.cp9 #guanbi,.cp10 .guanbi{
+.cp_top .cp2 .guanbi,.cp3 .guanbi,.cp4 .guanbi,.cp5 .guanbi,.cp6 .guanbi,.cp7 .guanbi,.cp8 .guanbi,.cp9 .guanbi,.cp10 .guanbi{
 	width: 14%;
     height: 0.6%;
     position: absolute;
@@ -688,4 +702,323 @@ input[type="number"]::-webkit-textfield-decoration-container {
     top: 0;
     background:transparent;
     z-index: 30;
+}
+ .box .car_dot{
+    width: 100%;
+    height: 2.5%;
+    position: absolute;
+    left: 0;
+    top: 45%;
+    z-index: 6;
+ }
+.box .car_dot .frist_btn{
+	position: absolute;
+    left: 9%;
+    top: 0;
+    width: 34%;
+    height: 100%;
+}
+.box .car_dot .sencond_btn{
+	position: absolute;
+    left: 52%;
+    top: 0;
+    width: 34%;
+    height: 100%;
+}
+ .box .lunbo_two{
+ 	width: 100%;
+    height: 15%;
+    position: absolute;
+    left: 0;
+    top: 45.6%;
+ }
+.box .bright_one{
+	 width: 100%;
+	 height: 100%;
+	 position: absolute;
+	 left:0;
+	 top:0;
+}
+
+.box .bright_one .bright_one_top{
+	width: 100%;
+    height: 11%;
+    background:url(../img/ld_top2.png) no-repeat center;
+    background-size:  auto 100%;
+}
+.box .bright_one .bright_one_bottom,.box .bright_two .bright_two_bottom{
+	width: 90%;
+    height: 81%;
+    margin: 6% auto ;
+    position: relative;
+    margin-top: 14.5%;
+    
+}
+.box .bright_one .bright_one_bottom #brightOne,.box .bright_two .bright_two_bottom #brightTwo{
+	width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.bright_one_bottom #brightOne .swiper-slide{
+	width: 100%;
+	height: 100%;
+}
+.brightOne1{
+	background: url(../img/lunbo1_1_03.png) no-repeat;
+    background-size: 100% 100%;
+    background-position: center top;
+}
+.brightOne2{
+	background: url(../img/lunbo1_2_03.png) no-repeat;
+    background-size: 100% 100%;
+    background-position: center top;
+}
+.brightOne3{
+	background: url(../img/lunbo1_3_03.png) no-repeat;
+    background-size: 100% 100%;
+    background-position: center top;
+}
+.brightOne4{
+	background: url(../img/lunbo1_4_03.png) no-repeat;
+    background-size: 100% 100%;
+    background-position: center top;
+}
+.brightOne5{
+	background: url(../img/lunbo1_5_03.png) no-repeat;
+    background-size: 100% 100%;
+    background-position: center top;
+}
+
+.brightOne6{
+	background: url(../img/lunbo1_6_03.png) no-repeat;
+    background-size: 100% 100%;
+    background-position: center top;
+}
+.brightOne7{
+	background: url(../img/lunbo1_7_03.png) no-repeat;
+    background-size: 100% 100%;
+    background-position: center top;
+}
+.brightOne8{
+	background: url(../img/lunbo1_8_03.png) no-repeat;
+    background-size: 100% 100%;
+    background-position: center top;
+}
+.brightOne9{
+	background: url(../img/lunbo1_9_03.png) no-repeat;
+    background-size: 100% 100%;
+    background-position: center top;
+}
+.brightOne10{
+	background: url(../img/lunbo1_10_03.png) no-repeat;
+    background-size: 100% 100%;
+    background-position: center top;
+}
+.box .bright_two{
+	 width: 100%;
+	 height: 100%;
+	 position: absolute;
+	 left:0;
+	 top:0;
+	 display: none;
+}
+.box .bright_two .bright_two_top{
+	width: 100%;
+    height: 11%;
+    background:url(../img/ld_top1.png) no-repeat center;
+    background-size:  auto 100%;
+}
+.brighttwo1{
+	background: url(../img/lunbo2_1_03.png) no-repeat;
+    background-size: 100% 100%;
+    background-position: center top;
+}
+.brighttwo2{
+	background: url(../img/lunbo2_2_03.png) no-repeat;
+    background-size: 100% 100%;
+    background-position: center top;
+}
+.brighttwo3{
+	background: url(../img/lunbo2_3_03.png) no-repeat;
+    background-size: 100% 100%;
+    background-position: center top;
+}
+.brighttwo4{
+	background: url(../img/lunbo2_4_03.png) no-repeat;
+    background-size: 100% 100%;
+    background-position: center top;
+}
+
+.brighttwo5{
+	background: url(../img/lunbo2_5_03.png) no-repeat;
+    background-size: 100% 100%;
+    background-position: center top;
+}
+.brighttwo6{
+	background: url(../img/lunbo2_6_03.png) no-repeat;
+    background-size: 100% 100%;
+    background-position: center top;
+}
+.brighttwo7{
+	background: url(../img/lunbo2_7_03.png) no-repeat;
+    background-size: 100% 100%;
+    background-position: center top;
+}
+.brighttwo1{
+	background: url(../img/lunbo2_1_03.png) no-repeat;
+    background-size: 100% 100%;
+    background-position: center top;
+}
+.brighttwo8{
+	background: url(../img/lunbo2_8_03.png) no-repeat;
+    background-size: 100% 100%;
+    background-position: center top;
+}
+.brighttwo9{
+	background: url(../img/lunbo2_9_03.png) no-repeat;
+    background-size: 100% 100%;
+    background-position: center top;
+}
+.brighttwo10{
+	background: url(../img/lunbo2_10_03.png) no-repeat;
+    background-size: 100% 100%;
+    background-position: center top;
+}
+
+.box-one {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+}
+
+.iframe-box {
+    width: 87%;
+    height: 79%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 500;
+}
+
+.iframe-box .iframe-inner-box {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 500;
+    overflow: hidden;
+}
+
+.iframe-box .iframe-inner-box-ios {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 500;
+    -webkit-overflow-scrolling: touch;
+    overflow-y: scroll;
+}
+iframe {
+    width: 100%;
+    height: 100%;
+}
+@media all and (min-height: 400px) and (max-height: 480px) {
+    iframe {
+        width: 100%;
+        height: 100%;
+        /*margin-top: -5%;*/
+    }
+}
+
+@media all and (min-height: 481px) and (max-height: 568px) {
+    iframe {
+        width: 100%;
+        height: 100%;
+        /*margin-top: -15%;*/
+    }
+}
+
+@media all and (min-height: 481px) and (max-height: 520px) {
+    iframe {
+        width: 100%;
+        height: 100%;
+        margin-top: -5%;
+    }
+}
+
+@media all and (min-height: 520px) and (max-height: 568px) {
+    iframe {
+        width: 100%;
+        height: 100%;
+        /*margin-top: -5%;*/
+    }
+}
+
+@media all and (min-height: 569px) and (max-height: 627px) {
+    iframe {
+        width: 100%;
+        height: 100%;
+        /*margin-top: -15%;*/
+    }
+}
+
+@media all and (min-height: 628px) and (max-height: 645px) {
+    iframe {
+        width: 100%;
+        height: 100%;
+        /*margin-top: -5%;*/
+    }
+}
+
+@media all and (min-height: 645px) and (max-height: 750px) {
+    iframe {
+        width: 100%;
+        height: 100%;
+        /*margin-top: -16%;*/
+    }
+}
+
+.go {
+    width: 27%;
+    height: 8.5%;
+    position: fixed;
+    right: -4%;
+    top: 3.3%;
+    background: url(../img/guanbi.png) no-repeat;
+    background-size: auto 100%;
+    background-position: center center;
+    z-index: 1100;
+    display: none;
+}
+.box-one .go {
+    width: 27%;
+    height: 8.5%;
+    position: absolute;
+    right: -4%;
+    top: 3.3%;
+    background: url(../img/guanbi.png) no-repeat;
+    background-size: auto 100%;
+    background-position: center center;
+    z-index: 800;
 }
